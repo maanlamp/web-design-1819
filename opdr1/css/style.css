@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+#picker.open {
+	padding: 1rem;
+	font-size: 3rem;
+	font-family: sans-serif;
+	border: none;
+	background: none;
+	position: relative;
+	width: 33%;
+	height: 30rem;
+	word-spacing: 1rem;
+	text-align: center;
+} #picker>#input {
+	padding: inherit;
+	font: inherit;
+	border: none;
+	resize: none;
+	color: transparent;
+	caret-color: white;
+	word-spacing: inherit;
+	text-align: inherit;
+	background: none;
+} #picker>#input::selection {
+	color: transparent;
+	background: rgb(123, 119, 228);
+} #picker>#vis {
+	background-color: rgb(42, 81, 207);
+	padding: inherit;
+	font: inherit;
+	pointer-events: none;
+	word-spacing: inherit;
+	text-align: inherit;
+	border-radius: 4px;
+} #picker>#input,
+	#picker>#vis {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+} #picker>#shorthands {
+	justify-content: space-around;
+	position: absolute;
+	right: -10rem;
+	word-spacing: initial;
+	color: black;
+	font-size: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: 100%;
+	top: 0;
+} #picker button {
+	padding: .5rem 1.5rem;
+	border: none;
+	background: #DBDBDB;
+	border-bottom: 2px solid #B4B4B4;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: transform .2s ease;
+} #picker button:hover,
+	#picker button:focus {
+	transform: scale(1.1);
+} #picker>#thot {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 1rem;
+}
+
+#picker>#vis>.error {
+	text-decoration: underline wavy red;
+} #picker>#vis>.day {
+	color: white;
+} #picker>#vis>.number {
+	color: white;
+} #picker>#vis>.month {
+	color: white;
+} #picker>#vis>.operator,
+	#picker>#vis>.range,
+	#picker>#vis>.divider,
+	#picker>#vis>.placeholder {
+	color: #ffffff80;
+} #picker>#vis>.divider {
+	position: relative;
+} #picker>#vis>.divider::after {
+	content: "/";
+	position: absolute;
+	left: 33%;
+}

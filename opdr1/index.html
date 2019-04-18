@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/datepicker.js" type="module"></script>
+	<title>Datumkiezer</title>
+</head>
+<body>
+	<div id="picker" class="open">
+		<div id="vis"></div>
+		<textarea id="input" spellcheck="false" autofocus autocomplete="off"></textarea>
+		<div id="shorthands">
+			<button data-date="? ? -1" accesskey="v">Vorig jaar</button>
+			<button data-date="? -1 ?" accesskey="o">Vorige maand</button>
+			<button data-date="-7 ? ?" accesskey="r">Vorige week</button>
+			<button data-date="-2 ? ?" accesskey="e">Eergisteren</button>
+			<button data-date="-1 ? ?" accesskey="g">Gisteren</button>
+			<button data-date="? ? ?"  accesskey="a">Vandaag</button>
+			<button data-date="+1 ? ?" accesskey="m">Morgen</button>
+			<button data-date="+2 ? ?" accesskey="o">Overmorgen</button>
+			<button data-date="+7 ? ?" accesskey="l">Volgende week</button>
+			<button data-date="? +1 ?" accesskey="n">Volgende maand</button>
+			<button data-date="? ? +1" accesskey="d">Volgend jaar</button>
+		</div>
+		<button id="thot" data-date="..">Voeg einddatum toe</button>
+	</div>
+</body>
+</html>
