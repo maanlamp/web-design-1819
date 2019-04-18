@@ -104,3 +104,7 @@ body {
 	position: absolute;
 	left: 33%;
 }
+
+.underline {
+	text-decoration: underline;
+}
