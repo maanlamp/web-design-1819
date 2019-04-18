@@ -107,4 +107,5 @@ body {
 
 .underline {
 	text-decoration: underline;
+	display: inline-block;
 }
