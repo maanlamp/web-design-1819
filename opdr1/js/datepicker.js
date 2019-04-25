@@ -24,7 +24,7 @@ const lexer = (new Lexer())
 	.rule("day", optDays)
 	.rule("month", optMonths)
 	.rule("operator", /[\+\-\^]/)
-	.rule("range", /\.\./)
+	.rule("range", /\./)
 	.rule("divider", /[ `/;:'\\]+/)
 	.rule("placeholder", /\?|\,/)
 	.rule("error", /.+/);
@@ -35,10 +35,11 @@ document.querySelectorAll("#picker button").forEach(button => button.addEventLis
 }));
 picker.addEventListener("input", doTheThing);
 
+const actual = document.querySelector("#actual");
 function doTheThing () {
 	const input = picker.value;
 	const tokens = lexer.lex(input);
 	pickerVisuals.innerHTML = tokens.map(token => `<span class="${token.type}">${(token.type === "divider") ? " " : token.lexeme}</span>`).join("");
 	const parsed = parser(tokens);
-	console.log(parsed);
+	actual.textContent = parsed;
 }

@@ -50,12 +50,12 @@ body {
 	width: 100%;
 	top: 0;
 	right: 0;
-	bottom: 0;
+	bottom: 3.75rem;
 	left: 0;
 } #picker>#shorthands {
 	justify-content: space-around;
 	position: absolute;
-	right: -10rem;
+	right: -13rem;
 	word-spacing: initial;
 	color: black;
 	font-size: 1.5rem;
@@ -63,9 +63,10 @@ body {
 	flex-wrap: wrap;
 	flex-direction: column;
 	height: 100%;
+	flex-basis: 50%;
 	top: 0;
 } #picker button {
-	padding: .5rem 1.5rem;
+	padding: 2rem 3rem;
 	border: none;
 	background: #DBDBDB;
 	border-bottom: 2px solid #B4B4B4;
@@ -74,7 +75,7 @@ body {
 	transition: transform .2s ease;
 } #picker button:hover,
 	#picker button:focus {
-	transform: scale(1.1);
+	transform: scale(2);
 } #picker>#thot {
 	position: absolute;
 	width: 100%;
@@ -108,4 +109,10 @@ body {
 .underline {
 	text-decoration: underline;
 	display: inline-block;
+}
+
+#actual {
+	transform: translate(-12.5%, -6rem);
+	width: 150%;
+	text-align: center;
 }
